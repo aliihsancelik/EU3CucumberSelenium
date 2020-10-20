@@ -18,8 +18,10 @@ public class LoginStepDefs {
 
     @Then("the user should be able to login")
     public void the_user_should_be_able_to_login() {
+
         System.out.println("I verified title changed to dashboard");
     }
+
     @When("the user enters the sales manager information")
     public void the_user_enters_the_sales_manager_information() {
         System.out.println("I put the credentials of sales manager");
