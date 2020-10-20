@@ -29,7 +29,7 @@ public class LoginStepDefs {
     public void the_user_enters_the_store_manager_information() {
         System.out.println("I put the credentials of store manager");
 
-    }
+   }
 
 
 
