@@ -13,7 +13,7 @@ public class LoginStepDefs {
 
     @When("the user enters the driver information")
     public void the_user_enters_the_driver_information() {
-        System.out.println("I put the credentials");
+        System.out.println("I put the credentials of driver");
     }
 
     @Then("the user should be able to login")
