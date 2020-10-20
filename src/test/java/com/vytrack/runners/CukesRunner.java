@@ -17,6 +17,9 @@ import org.junit.runner.RunWith;
                         //you can manage your smoke or regression suite with this way!
         //tags = "@driver and @login" => it means which has driver AND login run it
         //tags = "@driver or @store_manager" => it means which has driver OR login run it
+        //tags = "@login and not @sales_manager and not @store_manager" => it means;
+               //- which has login and has not sales_manager and has not @store_manager run it (same with exclude)
+               //if we put some tag after not: 'not @...' it will run all tags but not the one you wrote after not!
 )
 public class CukesRunner {
 
