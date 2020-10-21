@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class NavigationMenuStepDefs {
+
     @When("the user navigates to Fleet, Vehicles")
     public void the_user_navigates_to_Fleet_Vehicles() {
         //selenium code
@@ -27,6 +28,7 @@ public class NavigationMenuStepDefs {
 
     @Then("title should be Campaigns")
     public void title_should_be_Campaigns() {
+
         System.out.println("verify Expected and Actual title are matching");
     }
 

@@ -59,6 +59,18 @@ public class LoginStepDefs {
 
     }
 
+    @Given("the user logged in as {string}")
+    public void the_user_logged_in_as(String userType) {
+        LoginPage loginPage = new LoginPage();
+        if(userType.contains("driver")){
+            loginPage.login(ConfigurationReader.get("driver_username"), ConfigurationReader.get("driver_password"));
+        }else if(userType.contains("sales")){
+            loginPage.login(ConfigurationReader.get("sales_manager_username"), ConfigurationReader.get("sales_manager_password"));
+        }else if(userType.contains("store")){
+            loginPage.login(ConfigurationReader.get("store_manager_username"), ConfigurationReader.get("store_manager_password"));
+        }
+    }
+
 
 
 
