@@ -16,11 +16,11 @@ public class HOOKS {
     }
 
 
-    @Before(value = "@database", order = 1) //custom before tag only for @database scenario
+    @Before(value = "@database", order = 1) //custom before: the scenario you put @database before, it runs before
     public void setUpDatabase(){
         System.out.println("\tconnecting to database");
     }
-    @After(value = "@database", order = 1 ) //custom after tag only for @database scenario
+    @After(value = "@database", order = 1 ) //custom after: the scenario you put @database before, it runs after
     public void tearDownDatabase(){
         System.out.println("\tdisconnecting to database");
     }
