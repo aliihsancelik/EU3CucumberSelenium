@@ -2,7 +2,8 @@
    @smoke
    Feature: Users should be able to login
 
-     #Background helps us to use common steps for all scenarios in this file
+     #Background helps us to use common steps for all scenarios in this file-
+     #it can not jump and go back again this is only for common BACKgrounds
      Background:
        Given the user is on the login page
 

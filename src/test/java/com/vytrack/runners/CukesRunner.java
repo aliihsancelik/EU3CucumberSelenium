@@ -6,7 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"json:target/cucumber.json"},//plugin creates this file for reporting with cucumber
+        plugin = {"json:target/cucumber.json",//we run and report with maven and the results come to this file(the 2 plugins in pom are related with this way of reporting)
+        "html:target/default-html-reports"},//we run and report with CukesRunner and the results come to this file(this is simple reporting, we mostly use the up below one)
 
 
         features = "src/test/resources/features",
