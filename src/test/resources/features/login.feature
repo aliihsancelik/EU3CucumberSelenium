@@ -21,7 +21,7 @@
       Then the user should be able to login
 
      @wip #homework
-     Scenario: login as a driver
+     Scenario: login as a user
        Given the user is on the login page
        When the user logged in as "store manager"
        Then the user should be able to login
