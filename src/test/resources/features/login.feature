@@ -20,11 +20,10 @@
       When the user enters the store manager information
       Then the user should be able to login
 
-     @wip #homework
+      #homework
      Scenario: login as a user
        Given the user is on the login page
        When the user logged in as "store manager"
-       Then the user should be able to login
-       And the title contains "Dashboard"
+       Then the title contains "Dashboard"
     #driver,storemanager,salesmanager
    #you will have one step definition and it will handle different usertypes
