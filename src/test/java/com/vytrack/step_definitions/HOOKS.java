@@ -15,7 +15,7 @@ public class HOOKS {
     @Before(order = 0) //for all scenarios executes before, order=0 means before everything for @before
     public void setUp(){
 
-        Driver.get().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @After(order = 0) //for all scenarios executes before, order=0 means after everything for @after OPPOSITE of before!!
