@@ -1,5 +1,6 @@
 package com.vytrack.step_definitions;
 
+import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -15,6 +16,7 @@ public class HOOKS {
     @Before(order = 0) //for all scenarios executes before, order=0 means before everything for @before
     public void setUp(){
 
+        Driver.get().get(ConfigurationReader.get("url"));
         Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 

@@ -6,8 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"json:target/cucumber.json",//we run and report with maven and the results come to this file(the 2 plugins in pom are related with this way of reporting)
-        "html:target/default-html-reports"},//we run and report with CukesRunner and the results come to this file(this is simple reporting, we mostly use the up below one)
+        plugin = {"json:target/cucumber.json",//this works with maven-verify and creates detailed html report
+        "html:target/default-html-reports",//this is the simple cucumber html report works with run button and maven-verify
+        "rerun:target/rerun.txt"},//creates rerun.txt file includes failed test scenarios
 
 
         features = "src/test/resources/features",

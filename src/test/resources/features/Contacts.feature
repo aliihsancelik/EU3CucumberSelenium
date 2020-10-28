@@ -28,7 +28,7 @@ Feature: Contacts page
         Then the user should be able to login
 
 
-  @wip #this is data driven testing in this file not the all pipes included scenarios and this is the different way, actual way is in AccountTypes.feature
+   #this is data driven testing in this file not the all pipes included scenarios and this is the different way, actual way is in AccountTypes.feature
   Scenario Outline: login as a given user <user>
     Given the user is on the login page
     When the user logs in using following credentials
