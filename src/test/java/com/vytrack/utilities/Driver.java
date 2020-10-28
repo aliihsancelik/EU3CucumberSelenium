@@ -14,16 +14,19 @@ import org.openqa.selenium.safari.SafariDriver;
 public class Driver {
     private Driver() {
     }
-    // InheritableThreadLocal  --> this is like a container, bag, pool.
-    // in this pool we can have separate objects for each thread
+    // InheritableThreadLocal  --> this provides like a singleton drivers pool!
+    // in this pool we can have separate objects for each thread(run)-feature files which includes the tag!
     // for each thread, in InheritableThreadLocal we can have separate object for that thread
     // driver class will provide separate webdriver object per thread
+    //we also put parallel and useUnlimitedThreads in plugins in pom.
+    //it is opening one browser for each feature file that has the tag you wanna run,if there is more than one tag-
+    //-in the same feature file those tags will be in same browser, it will not open new browser for them.
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
     public static WebDriver get() {
         //if this thread doesn't have driver - create it and add to pool
         if (driverPool.get() == null) {
-//            if we pass the driver from terminal then use that one
-//           if we do not pass the driver from terminal then use the one properties file
+//          if we pass the driver from terminal then use that one(explains after '?' for down below)
+//          if we do not pass the driver from terminal then use the one properties file(explains after ':' for down below)
             String browser = System.getProperty("browser") != null ? browser = System.getProperty("browser") : ConfigurationReader.get("browser");
             switch (browser) {
                 case "chrome":
