@@ -19,6 +19,7 @@
     When the user enters the sales manager information
     Then the user should be able to login
 
+      @paralel
      @store_manager  @login  #//@smoke
      Scenario: Login as a store manager
       #Given the user is on the login page

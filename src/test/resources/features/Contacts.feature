@@ -1,6 +1,6 @@
 Feature: Contacts page
 
-
+ @paralel
   Scenario: Default page number
     Given the user is on the login page
     And the user enters the driver information
