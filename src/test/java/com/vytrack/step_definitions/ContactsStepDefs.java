@@ -40,8 +40,8 @@ public class ContactsStepDefs {
 
 
     //DATABASE TESTING PART !!!
-    @Then("the information should be same with database")
-    public void the_information_should_be_same_with_database() {
+    @Then("the information for {string} should be same with database")
+    public void the_information_for_should_be_same_with_database(String email) {
         BrowserUtils.waitFor(2);
 
 
@@ -66,7 +66,7 @@ public class ContactsStepDefs {
                 "on oc.id = oe.owner_id\n" +
                 "join orocrm_contact_phone op\n" +
                 "on oc.id = op.owner_id\n" +
-                "where oe.email = 'mbrackstone9@example.com'";
+                "where oe.email = '"+email+"'";
 
         //we are getting only one row of result
         Map<String, Object> rowMap = DBUtils.getRowMap(query);
@@ -82,11 +82,10 @@ public class ContactsStepDefs {
 //DBUtils.destroy(); ==> it is in custom after in hooks(because in this test any previous step fails it won't close connection!)
 
 
-        //ASSERTION:
+        //ASSERTION, compare UI against DATABASE:
         Assert.assertEquals(expectedFullname,actualFullname);
         Assert.assertEquals(expectedEmail,actualEmail);
         Assert.assertEquals(expectedPhone,actualPhone);
-
     }
 
 
