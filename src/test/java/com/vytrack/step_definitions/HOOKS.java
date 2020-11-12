@@ -1,6 +1,7 @@
 package com.vytrack.step_definitions;
 
 import com.vytrack.utilities.ConfigurationReader;
+import com.vytrack.utilities.DBUtils;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -37,11 +38,13 @@ public class HOOKS {
     public void setUpDatabase(){
 
         System.out.println("\tconnecting to database");
+        DBUtils.createConnection();
     }
     @After(value = "@database", order = 1 ) //custom after: the scenario you put @database before, it runs after
     public void tearDownDatabase(){
 
         System.out.println("\tdisconnecting to database");
+        DBUtils.destroy();
     }
 
 }
