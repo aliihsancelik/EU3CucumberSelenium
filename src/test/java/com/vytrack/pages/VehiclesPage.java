@@ -9,7 +9,7 @@ public class VehiclesPage extends BasePage{
 
 
     @FindBy(xpath = "(//div[@class='control-label'])[1]")
-    public WebElement responsible;
+    public WebElement type;
 
     @FindBy(xpath = "(//div[@class='control-label'])[3]")
     public WebElement activationCost;
