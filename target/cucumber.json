@@ -1,0 +1,148 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-11-14T22:48:53.364Z",
+        "before": [
+          {
+            "result": {
+              "duration": 12482137000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.HOOKS.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 8254198000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.HOOKS.setUpDatabase()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Verify Vehicles info with database testing",
+        "description": "",
+        "id": "vehicles-information;verify-vehicles-info-with-database-testing",
+        "after": [
+          {
+            "result": {
+              "duration": 25709000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.HOOKS.tearDownDatabase()"
+            }
+          },
+          {
+            "result": {
+              "duration": 924072000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.HOOKS.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10569496000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user logged in as \"sales manager\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sales manager\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_logged_in_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2936775000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user navigates to \"Fleet\" \"Vehicle Contracts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Fleet\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Vehicle Contracts\"",
+                  "offset": 30
+                }
+              ],
+              "location": "com.vytrack.step_definitions.NavigationMenuStepDefs.the_user_navigates_to(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5839762000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user clicks the vehicle contract has \"Marc\" responsible name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Marc\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.vytrack.step_definitions.VehiclesStepDefs.the_user_clicks_the_vehicle_contract_has_responsible_name(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 604158000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the information for the vehicle contract has \"Marc\" responsible name is same with the database",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Marc\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.vytrack.step_definitions.VehiclesStepDefs.the_information_for_the_vehicle_contract_has_responsible_name_is_same_with_the_database(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          },
+          {
+            "name": "@database"
+          }
+        ]
+      }
+    ],
+    "name": "Vehicles information",
+    "description": "",
+    "id": "vehicles-information",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Vehicles.feature",
+    "tags": []
+  }
+]
