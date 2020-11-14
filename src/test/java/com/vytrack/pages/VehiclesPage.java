@@ -9,17 +9,17 @@ public class VehiclesPage extends BasePage{
 
 
     @FindBy(xpath = "(//div[@class='control-label'])[1]")
-    public WebElement licencePlate;
+    public WebElement responsible;
 
     @FindBy(xpath = "(//div[@class='control-label'])[3]")
-    public WebElement driverName;
+    public WebElement activationCost;
 
     @FindBy(xpath = "(//div[@class='control-label'])[6]")
-    public WebElement modelYear;
+    public WebElement odometerDetails;
 
 
-    public WebElement getVehicle(String driverName){
-        WebElement driverNameLocator = Driver.get().findElement(By.xpath("//td[contains(text(),'"+driverName+"')]"));
-        return driverNameLocator;
+    public WebElement getVehicle(String responsible){
+        WebElement responsibleLocator = Driver.get().findElement(By.xpath("//td[contains(text(),'"+responsible+"')]"));
+        return responsibleLocator;
     }
 }

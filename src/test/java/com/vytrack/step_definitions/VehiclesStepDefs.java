@@ -18,16 +18,17 @@ public class VehiclesStepDefs {
 
         //get the infos from UI part which we wanna verify
         VehiclesPage vehiclesPage = new VehiclesPage();
-        String actualLicencePlate = vehiclesPage.licencePlate.getText();
-        String actualDriverName = vehiclesPage.driverName.getText();
-        String actualModelYear = vehiclesPage.modelYear.getText();
+        String responsible = vehiclesPage.responsible.getText();
+        String activationCost = vehiclesPage.activationCost.getText();
+        String odometerDetails = vehiclesPage.odometerDetails.getText();
 
-        System.out.println("actualLicencePlate = " + actualLicencePlate);
-        System.out.println("actualDriverName = " + actualDriverName);
-        System.out.println("actualModelYear = " + actualModelYear);
+        System.out.println("responsible = " + responsible);
+        System.out.println("activationCost = " + activationCost);
+        System.out.println("odometerDetails = " + odometerDetails);
 
 
         //get the infos from DATABASE part
+
 
 
 
