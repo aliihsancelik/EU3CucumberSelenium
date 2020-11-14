@@ -44,7 +44,7 @@ Feature: Contacts page
       | storemanager85 | Stephan   | Haley     |
 
 
-  @wip @database
+  @database
   Scenario: Contacts test with email
     When the user logged in as "sales manager"
     And the user navigates to "Customers" "Contacts"
